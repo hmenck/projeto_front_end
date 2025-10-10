@@ -1,0 +1,103 @@
+:root {
+
+    --cor-primaria: #B92D2B;
+    --cor-secundaria: #DDC9B4;
+    --cor-fundo: #F9F6F2;
+    --cor-texto: #4A4A4A;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    background-color: var(--cor-fundo);
+    padding: 4rem 0;
+    flex-grow: 1; 
+}
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 2.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: var(--cor-primaria);
+    font-family: var(--fonte-titulos);
+    margin-bottom: 2rem;
+}
+
+/* Campos do Formulário */
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--fonte-corpo);
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 5px rgba(185, 45, 43, 0.3);
+}
+
+/* Botão */
+.form-button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    font-family: var(--fonte-titulos);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #942422;
+}
+
+/* Link para alternar entre as páginas de login e cadastro */
+.form-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #666;
+}
+
+.form-link a {
+    color: var(--cor-primaria);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+header .logo {
+    text-decoration: none;
+}

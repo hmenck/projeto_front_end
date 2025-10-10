@@ -1,0 +1,247 @@
+:root {
+    --cor-primaria: #B92D2B;
+    --cor-secundaria: #DDC9B4;
+    --cor-fundo: #F9F6F2;
+    --cor-texto: #4A4A4A;
+
+    --fonte-titulos: 'Poppins', sans-serif;
+    --fonte-corpo: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+    font-family: var(--fonte-corpo);
+    line-height: 1.6;
+    background-color: #fff;
+    color: var(--cor-texto);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--fonte-titulos);
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-family: var(--fonte-titulos);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--cor-primaria);
+}
+
+.nav-divider {
+    border-left: 1px solid #ccc;
+    margin: 0 10px;
+    height: 20px;
+}
+
+/* Botão Cadastre-se */
+.nav-button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #c9b59d;
+    color: var(--cor-texto);
+}
+
+/* Conteúdo Principal */
+section {
+    padding: 4rem 0;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+    color: var(--cor-primaria);
+}
+
+.hero {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    text-align: center;
+    padding: 6rem 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px; 
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    display: inline-block; 
+}
+
+.cta-button:hover {
+    background-color: #c9b59d; 
+}
+
+.sobre-imagens {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.sobre-imagens img {
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+#projetos {
+    background-color: var(--cor-fundo);
+}
+
+.projetos-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.projeto-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex-basis: 45%;
+}
+
+.projeto-card img {
+    width: 100%;
+    display: block;
+}
+
+.projeto-card h3,
+.projeto-card p,
+.projeto-card ul {
+    padding: 1rem;
+}
+
+.projeto-card ul {
+    list-style-position: inside;
+}
+
+/* Links Importantes */
+.links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.link-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    flex-basis: 30%;
+}
+
+.link-card i {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 1rem;
+}
+
+.link-card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--cor-texto);
+}
+
+.link-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.link-button {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.link-button:hover {
+    background-color: #c9b59d;
+}
+
+/* Rodapé  */
+footer {
+    background-color: var(--cor-texto);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
