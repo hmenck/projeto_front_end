@@ -18,6 +18,7 @@ Através dessa página, foram aplicados conceitos básicos de HTML e CSS atravé
 
 O projeto está organizado da seguinte forma:
 
+```
 raiz/
 │
 ├── index.html          # Página principal
@@ -34,6 +35,7 @@ raiz/
     ├── Exemplo2.jpg
     ├── projeto1.jpg
     └── projeto2.jpg
+```
 
 Link para visualizar o projeto:
 https://hmenck.github.io/projeto_front_end/
