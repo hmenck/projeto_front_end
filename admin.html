@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração | ONG Leitor Pé Vermelho</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="forms.css">
+
+    <script src="admin.js" defer></script>
+    
+    <style>
+        .form-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn-secondary {
+            background-color: #aaa; 
+        }
+        .btn-secondary:hover {
+            background-color: #888;
+        }
+        .search-container {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid #eee;
+        }
+        .search-box {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px 10px 10px 35px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: var(--fonte-corpo);
+        }
+        .search-box i {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+        }
+        #lista-usuarios {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        #lista-usuarios li {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: box-shadow 0.3s ease;
+        }
+        #lista-usuarios li:hover {
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .user-info span {
+            display: block;
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 2px;
+        }
+        .user-info strong {
+            color: var(--cor-texto);
+        }
+        .btn-delete-item {
+            background-color: transparent;
+            border: none;
+            color: #B92D2B;
+            cursor: pointer;
+            font-size: 1.1rem;
+            padding: 5px;
+            transition: transform 0.2s;
+        }
+        .btn-delete-item:hover {
+            transform: scale(1.2);
+            color: #942422;
+        }
+        .btn-danger {
+            background-color: #fff;
+            color: #B92D2B;
+            border: 1px solid #B92D2B;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-danger:hover {
+            background-color: #B92D2B;
+            color: #fff;
+        }
+        .titulo-lista {
+            font-family: var(--fonte-titulos);
+            color: var(--cor-texto);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">ONG Leitor Pé Vermelho</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="index.html#links">Links Importantes</a></li>
+                    <li><a href="admin.html" style="color: var(--cor-primaria); font-weight: bold;">Admin</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="form-container">
+            <h2>Gestão de Voluntários</h2>
+            
+            <form id="form-admin">
+                <div class="form-group">
+                    <label for="admin_nome">Nome Completo</label>
+                    <input type="text" id="admin_nome" name="admin_nome" placeholder="Nome do usuário" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin_email">E-mail</label>
+                    <input type="email" id="admin_email" name="admin_email" placeholder="E-mail do usuário" required>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="submit" class="form-button">Cadastrar</button>
+                    <button type="button" id="btn-limpar" class="form-button btn-secondary">Limpar</button>
+                </div>
+            </form>
+            
+            <div class="search-container">
+                <h3 class="titulo-lista">Usuários Cadastrados</h3>
+                
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="input-pesquisa" placeholder="Pesquisar por nome ou e-mail...">
+                </div>
+
+                <ul id="lista-usuarios">
+                </ul>
+
+                <button id="btn-excluir-todos" class="btn-danger" style="display: none;">
+                    <i class="fas fa-trash-alt"></i> Excluir Todos os Registros
+                </button>
+            </div>
+
+            <p class="form-link"><a href="index.html">Voltar para a Home</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ONG Leitor Pé Vermelho. Informações fictícias.</p>
+            <p>Desenvolvido por: <span class="footer-extra-link"><a href="https://hmenck.github.io/Curriculo/" target="_blank" rel="noopener noreferrer">Henrique Gonçalves Menck</a></span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
